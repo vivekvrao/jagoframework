@@ -1,6 +1,22 @@
-# jagoframework 
+package com.viloma.jagoframework.sample;
 
-```java
+
+import java.sql.SQLException;
+import java.util.Date;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+
+import com.viloma.jagoframework.JagoServer;
+
+/**
+ * Your project main - needs to extend JagoServer which provides a full server-stack web-dev tools
+ * 
+ * it provides 
+ * - a router
+ * - an ORM with table generator 
+ * - and a dev time admin
+ */
 public class JagoFrameworkSample extends JagoServer {
 	
     /**
@@ -94,4 +110,3 @@ public class JagoFrameworkSample extends JagoServer {
         return new TemplResponse("default", "Mustache template {{greet.greeting}}").add("greet", greet);
     }
 }
-```

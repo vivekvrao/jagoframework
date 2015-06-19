@@ -1,0 +1,25 @@
+<web-app>
+    <servlet>
+        <servlet-name>jago</servlet-name>
+        <servlet-class>com.viloma.jagoframework.sample.JagoFrameworkSample</servlet-class>
+        <init-param>
+            <param-name>DB</param-name>
+            <param-value>jdbc:h2:file:./data/db1|org.h2.Driver|u|p</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ADMIN_PAGE</param-name>
+            <param-value>/admin</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jago</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/public/*</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>
